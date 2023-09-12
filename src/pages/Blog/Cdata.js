@@ -1,4 +1,3 @@
-import React from 'react'
 import cardimg1 from './../../Images/cardimg1.jpg'
 import cardimg2 from './../../Images/cardimg2.jpg'
 import cardimg3 from './../../Images/cardimg3.jpg'

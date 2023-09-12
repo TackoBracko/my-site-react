@@ -1,5 +1,5 @@
 import React from 'react'
-import {PostWrapper, Content, PostImg, PostText} from './StyledComponent/SinglePostWrapper'
+import {PostWrapper, Content} from './StyledComponent/SinglePostWrapper'
 import cardimg2 from './../../Images/cardimg2.jpg'
 
 export default function SinglePost() {
@@ -7,7 +7,7 @@ export default function SinglePost() {
     <>
       <PostWrapper>
         <Content>
-          <img src={cardimg2} />
+          <img src={cardimg2} alt='post-img' />
         </Content>
           
         <h1>The standard chunk of Lorem Ipsum</h1>

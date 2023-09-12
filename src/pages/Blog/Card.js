@@ -1,6 +1,5 @@
 import React from 'react'
 import posts from './Cdata'
-import SinglePost from './SinglePost'
 import { CardWrapper, CardPost, CardImg, CardContent, CardButton } from './StyledComponent/CardWrapper'
 
 export default function Card() {

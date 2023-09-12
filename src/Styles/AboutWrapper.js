@@ -1,5 +1,4 @@
 import style from 'styled-components'
-import {breakpoints} from './../components/BreakPoints'
 
 export const MainHeader = style.div`
     display:flex;

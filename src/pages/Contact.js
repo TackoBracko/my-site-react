@@ -3,7 +3,7 @@ import {FaRegAddressCard} from 'react-icons/fa'
 import {BsTelephone} from 'react-icons/bs'
 import {BsMailbox} from 'react-icons/bs'
 
-import { Button, ContactAccessories, Accessories, ContactText, FormWrapper, Form, InputWrapper, InputDiv, TextArea } from './../Styles/ContactWrapper'
+import { Button, ContactAccessories, Accessories, ContactText, Form, InputDiv, TextArea } from './../Styles/ContactWrapper'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser';
 
