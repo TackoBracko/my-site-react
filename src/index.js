@@ -12,8 +12,13 @@ import Home from './pages/Home'
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import BlogHome from "./pages/Blog/BlogHome";
+import SinglePost from "./pages/Blog/SinglePost";
 
-import { GlobalStyles } from "./Components/GlobalStyle";
+import { GlobalStyles } from "./Styles/GlobalStyle";
+import NavBar from "./components/NavBar";
+import Footer from './components/Footer';
+import Layout from "./components/Layout";
 
 
 const router = createBrowserRouter([
@@ -26,24 +31,47 @@ const router = createBrowserRouter([
 
   {
     path:"about",
-    element: <About />
+    element: <About title="So, Who am I" />
   },
 
   {
     path: "portfolio",
-    element: <Portfolio />
+    element: <Portfolio title="PORTFOLIO" />
   },
 
   {
     path:"contact",
-    element: <Contact />
-  }
+    element: <Contact title="Contact" />
+  },
 
+  {
+    path:"blog",
+    element: <BlogHome />
+  },
+
+  {
+    path: "singlepost",
+    element: <SinglePost />
+  }
 ])
 
-ReactDOM.createRoot(document.getElementById('root')).render (
-  <React.StrictMode>
-    <GlobalStyles />
-      <RouterProvider router={router} />
-  </React.StrictMode>
+
+function App() {
+  return (
+    <React.StrictMode>
+      <GlobalStyles />
+      <NavBar />
+      <Layout>
+        <RouterProvider router={router} />
+      </Layout>
+      <Footer />
+    </React.StrictMode>
+
+  )
+}
+
+const container = document.getElementById('root')
+const root = ReactDOM.createRoot(container)
+root.render(
+<App />
 )

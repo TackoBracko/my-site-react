@@ -1,25 +1,28 @@
-import React from 'react'
-import logo1 from './../Pictures/logo1.png'
-import logo2 from './../Pictures/logo2.png'
-import me from './../Pictures/me.jpg'
+import React, { useState } from 'react'
 
-import { Grow, Nav } from '../Components/NavBarWrapper'
-import { LogoWrapper } from '../Components/NavBarWrapper'
-import { NavList } from '../Components/NavBarWrapper'
+import { Grow, Nav } from '../Styles/NavBarWrapper'
+import { LogoWrapper } from '../Styles/NavBarWrapper'
+import { NavList } from '../Styles/NavBarWrapper'
+import {HiMenu} from 'react-icons/hi'
 
 export default function NavBar() {
+  const [showLinks, setShowLinks] = useState(false)
+
   return (
-    <Nav>
+    <Nav className={showLinks ? 'active' : '' }>
       <LogoWrapper 
         href='/'><Grow><span>tatjana</span></Grow>
       </LogoWrapper>
+            
+      <button onClick={() => {setShowLinks(!showLinks)}}>
+        <HiMenu />
+      </button>
       
-      <NavList>
+      <NavList >
           <li><a href='/about'>About</a></li>
           <li><a href='/portfolio'>Portfolio</a></li>
           <li><a href='/contact'>Contact</a></li>
       </NavList>
-      
 
     </Nav>
   )
