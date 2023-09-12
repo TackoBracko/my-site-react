@@ -51,7 +51,7 @@ export default function Contact(props) {
             <Accessories>
                 <BsMailbox />
                 <h3>E-mail</h3>
-                <p>tatjanaoljaca@yahoo.com</p>
+                <p>tatjanaoljaca@gmail.com</p>
             </Accessories>
 
             <Accessories>
